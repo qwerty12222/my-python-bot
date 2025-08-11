@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: telegram-bot
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    plan: free
+    envVars:
+      - key: BOT_TOKEN
+        value: 7306932481:AAHuckrmMlk4qGicAxqTKfATyEUtNKKObyI
+      - key: ADMIN_ID
+        value: "6460744486"
+      - key: WEBHOOK_URL
+        fromService:
+          type: web
+          name: telegram-bot
+          property: host
