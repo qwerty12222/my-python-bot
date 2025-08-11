@@ -11,7 +11,7 @@ services:
       - key: ADMIN_ID
         value: "6460744486"
       - key: WEBHOOK_URL
-         value: https://my-python-bot.onrender.com
+         value: https://my-python-bot-y9ur.onrender.com
         fromService:
           type: web
           name: telegram-bot
